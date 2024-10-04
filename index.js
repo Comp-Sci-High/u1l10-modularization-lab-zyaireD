@@ -14,6 +14,11 @@ let groceryList = ["Milk", "Oreos"];
 //////////////////////////////////////////////////////////////////////
 // 1. Create a function that adds an item to the list.
 // Return the new item.
+function add(groceryList,item){
+  groceryList.push(item)
+  console.log("item added" + item) 
+  return "item added" + item  
+}                                                           
 
 // Code to modularize:
 let item1 = "Animal Crackers";
@@ -31,6 +36,11 @@ console.log("Item added: " + item3);
 //////////////////////////////////////////////////////////////////////
 // 2. Create a function that removes the last item from the list.
 // Return the removed item.
+function removes(groceryList,item){
+  groceryList.push(item)
+  console.log("item removed" + item) 
+  return "item removed" + item  
+}                                                           
 
 // Code to modularize:
 let itemToRemove1 = groceryList[groceryList.length - 1];
@@ -78,59 +88,48 @@ if (groceryList.length === 0) {
 // 1. Write a function that logs how many items you have left in the list.
 // It should log the following "The grocery list has x item(s).", with x being how many items are left.
 // Returns the grocery list length.
-
+function itemsLeft(groceryList){
+console.log("The grocery list has ${x} item(s).",)
+return groceryList.length 
+}
 //////////////////////////////////////////////////////////////////////
 // 2. Write a function that clears the whole grocery list.
 // It should log the following "The grocery list is now empty."
 // Returns the empty grocery list.
-
+function empty(groceryList){
+console.log("The grocery list is now empty")
+return groceryList.length 
+}
 //////////////////////////////////////////////////////////////////////
 // Part 3 - Calling Functions
 // You want to create a charcuterie board so now it's time to call the functions you wrote in Part 1 and Part 2.
 // Your goal is to achieve the console output below by calling your functions.
 // Remember that your functions should've already included console logs, therefore you are only calling your functions NOT logging them below.
 
-/*
-// The grocery list is cleared
-// Item added: Gouda Cheese
-// Item added: Brie Cheese
-// Item added: Swiss Cheese
-// Item removed: Swiss Cheese
-// Item added: Green Grapes
-// Grocery List: Gouda Cheese, Brie Cheese, Green Grapes
-// Item added: Prosciutto
-// Item added: Chorizo
-// Item added: Multigrain Crackers
-// Item updated from Chorizo to Jamon
-// The grocery list has 6 item(s)
-// Item added: Pita Chips
-// Grocery List: Gouda Cheese, Brie Cheese, Green Grapes, Prosciutto, Jamon, Multigrain Crackers, Pita Chips
-*/
 
-// Call 1: Clear the grocery list
-
+//clear(groceryList)
 // Call 2: Add Gouda Cheese
-
+let newCheese = add(groceryList,"Gouda Cheese")
 // Call 3: Add Swiss Cheese
-
+let Cheese = add(groceryList,"Swiss Cheese")
 // Call 4: Remove Swiss Cheese
-
+let subCheese = removes(groceryList,"Swiss Cheese")
 // Call 5: Add Green Grapes
-
+let Grapes = add(groceryList,"Green Grapes")
 // Call 6: Add Prosciutto
-
+let Prosciutto = add(groceryList,"Prosciutto")
 // Call 7: Add Chorizo
-
+let Chorizo = add(groceryList,"Chorizo")
 // Call 8: Add Multigrain Crackers
-
+let Crackers = add(groceryList,"Multigrain Crackers")
 // Call 9: Update Chorizo to Jamon
-
+itemsLeft(itemsToUpdate,"Jamon","Chorizo")
 // Call 10: Show the count of items
-
+current(groceryList)
 // Call 11: Add Pita Chips
-
+add(groceryList,item)
 // Call 12: Show the final list
-
+itemsLeft(groceryList)
 
 //////////////////////////////////////////////////////////////////////
 // Extra Credit - Improving functions
